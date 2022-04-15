@@ -1,0 +1,13 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.msgs {
+  border: 5px solid dodgerblue;
+  min-height: 100px;
+}
+
+.full {
+  color: red;
+}

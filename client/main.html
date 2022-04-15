@@ -1,0 +1,40 @@
+<head>
+  <title>uChat</title>
+</head>
+
+<body>
+  <div class="container-xl">
+    {{> frame}}
+  </div>
+</body>
+
+<template name="frame">
+  <div class="row my-2">
+    <div class="col-xl-4">
+      {{> messenger}}
+    </div>
+    <div class="col-xl-4">
+      {{> messages}}
+    </div>
+  </div>
+</template>
+
+<template name="messenger">
+  <div class="form-floating">
+    <textarea class="form-control" placeholder="Type your message here" id="getMsg" style="height: 100px"></textarea>
+    <label for="floatingTextarea2">Send your message</label>
+    <button class="btn btn-primary my-2">Send</button>
+  </div>
+</template>
+
+<template name="messages">
+  <div class="msgs">
+    <p class="{{#if msgFull}}full{{/if}}">{{chatMsgs}}</p>
+    <p>{{newMsg}}</p>
+    {{#if msgFull}}
+    <h1>True</h1>
+    {{else}}
+    <h2>False</h2>
+    {{/if}}
+  </div>
+</template>
